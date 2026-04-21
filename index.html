@@ -3,43 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PowerPlantΦ Documentation</title>
+    <title>PowerPlantΦ | Documentation</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/dark.css">
     <style>
-        body { line-height: 1.6; }
-        pre { background: #1a1a1a; padding: 15px; border-radius: 8px; border: 1px solid #444; }
-        code { color: #00ffcc; }
-        .feature-tag { background: #0055ff; color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.8em; }
+        :root { --brand-color: #00ffcc; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        h1, h2, h3 { color: var(--brand-color); border-bottom: 1px solid #333; padding-bottom: 5px; }
+        pre { background: #1a1a1a; padding: 15px; border: 1px solid #444; border-left: 4px solid var(--brand-color); overflow-x: auto; }
+        code { color: #e6db74; font-family: 'Courier New', Courier, monospace; }
+        .sidebar { background: #222; padding: 10px; border-radius: 5px; margin-bottom: 20px; }
+        .physics-box { background: #002b36; padding: 15px; border-radius: 8px; border: 1px dashed var(--brand-color); }
+        footer { text-align: center; margin-top: 50px; padding: 20px; color: #888; font-style: italic; }
     </style>
 </head>
 <body>
+
     <header>
-        <h1>📘 PowerPlantΦ Documentation</h1>
-        <p>A custom VM-based language with a built-in physics engine.</p>
+        <h1>📘 POWERPLANTΦ FULL TUTORIAL</h1>
+        <p>Created by: <strong>Atila</strong></p>
     </header>
 
+    <div class="sidebar">
+        <p>PowerPlantΦ is a custom programming language featuring a <strong>Virtual Machine execution model</strong>, a built-in <strong>Physics Engine</strong>, and complex variable handling, all running inside C++.</p>
+    </div>
+
     <section>
-        <h2>System Architecture</h2>
-        <p>PowerPlantΦ translates source code into bytecode executed by a stack-based Virtual Machine.</p>
-        <pre>SOURCE → TOKENIZER → COMPILER → BYTECODE → VM → OUTPUT</pre>
+        <h2>1. Variables & Assignment</h2>
+        <p>Store numbers or strings into memory using the assignment arrow.</p>
+        <pre><code>α ← 5
+β ← 10
+variable ← expression</code></pre>
     </section>
 
     <section>
-        <h2>Core Syntax</h2>
-        <h3>Variables & Math</h3>
-        <pre>α ← 5
-β ← 10
-π α + β  <span class="feature-tag">Prints 15</span></pre>
+        <h2>2. Print System (π)</h2>
+        <p>Loads values onto the stack, executes math if needed, and prints the result.</p>
+        <pre><code>π 5
+π α + β
+π "hello"</code></pre>
+    </section>
 
-        <h3>Physics Engine</h3>
-        <p>Built-in formulas for Force ($F=ma$), Energy ($E=\frac{1}{2}mv^2$), and Velocity ($v=u+at$).</p>
-        <pre>π F 10 2  <span class="feature-tag">Result: 20</span>
-π E 5 3   <span class="feature-tag">Result: 22.5</span></pre>
+    <section>
+        <h2>3. Math & Logic</h2>
+        <ul>
+            <li><code>+</code> Addition | <code>-</code> Subtraction</li>
+            <li><code>*</code> Multiplication | <code>/</code> Division</li>
+            <li><code>√</code> Square Root (Syntax: <code>π √ 25</code>)</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>4. Control Flow</h2>
+        <h3>If Statement (ε)</h3>
+        <p>Runs a block if the condition is non-zero.</p>
+        <pre><code>ε α
+    π "ok"
+/ε</code></pre>
+        <h3>While Loop (ω)</h3>
+        <p>Repeats execution while the condition is true.</p>
+        <pre><code>ω α
+    π α
+    α ← α - 1
+/ω</code></pre>
+    </section>
+
+    <section>
+        <h2>5. Functions (θ / ξ)</h2>
+        <p>Define reusable code with <code>θ</code> and call it with <code>ξ</code>.</p>
+        <pre><code>θ f
+    π 999
+end
+ξ f</code></pre>
+    </section>
+
+    <section>
+        <h2>6. Physics Engine</h2>
+        <div class="physics-box">
+            <p><strong>Force:</strong> F = m × a | <code>π F 10 2</code></p>
+            <p><strong>Energy:</strong> E = 0.5 × m × v² | <code>π E 5 3</code></p>
+            <p><strong>Velocity:</strong> v = u + a × t | <code>π v 10 2 3</code></p>
+        </div>
+    </section>
+
+    <section>
+        <h2>7. System Architecture</h2>
+        <pre>SOURCE CODE → TOKENIZER → COMPILER → BYTECODE → VM → OUTPUT</pre>
+        <p>The VM utilizes a <strong>Stack System</strong> for operations and a <strong>Globals Map</strong> for memory management.</p>
+    </section>
+
+    <section>
+        <h2>8. Full Example Program</h2>
+        <pre><code>α ← 5
+β ← 3
+π α + β
+ε α
+    π "ok"
+/ε
+θ f
+    π 999
+end
+ξ f
+π F 10 2
+Ψ x
+π x
+Δ α</code></pre>
     </section>
 
     <footer>
-        <p>Built with C++ | Hosted on GitHub Pages</p>
+        <p>PowerPlantΦ Complete System & Documentation<br>
+        Credits: Atila | Built with C++ & GitHub Pages</p>
     </footer>
+
 </body>
 </html>
 
