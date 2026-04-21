@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PowerPlantΦ Documentation</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/dark.css">
+    <style>
+        body { line-height: 1.6; }
+        pre { background: #1a1a1a; padding: 15px; border-radius: 8px; border: 1px solid #444; }
+        code { color: #00ffcc; }
+        .feature-tag { background: #0055ff; color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.8em; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>📘 PowerPlantΦ Documentation</h1>
+        <p>A custom VM-based language with a built-in physics engine.</p>
+    </header>
+
+    <section>
+        <h2>System Architecture</h2>
+        <p>PowerPlantΦ translates source code into bytecode executed by a stack-based Virtual Machine.</p>
+        <pre>SOURCE → TOKENIZER → COMPILER → BYTECODE → VM → OUTPUT</pre>
+    </section>
+
+    <section>
+        <h2>Core Syntax</h2>
+        <h3>Variables & Math</h3>
+        <pre>α ← 5
+β ← 10
+π α + β  <span class="feature-tag">Prints 15</span></pre>
+
+        <h3>Physics Engine</h3>
+        <p>Built-in formulas for Force ($F=ma$), Energy ($E=\frac{1}{2}mv^2$), and Velocity ($v=u+at$).</p>
+        <pre>π F 10 2  <span class="feature-tag">Result: 20</span>
+π E 5 3   <span class="feature-tag">Result: 22.5</span></pre>
+    </section>
+
+    <footer>
+        <p>Built with C++ | Hosted on GitHub Pages</p>
+    </footer>
+</body>
+</html>
+
